@@ -100,23 +100,3 @@ class _ServicePostLearnState extends State<ServicePostLearn> {
         ));
   }
 }
-
-class _PostCard extends StatelessWidget {
-  const _PostCard({
-    super.key,
-    required PostModel? model,
-  }) : _model = model;
-
-  final PostModel? _model;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.only(bottom: 20),
-      child: ListTile(
-        title: Text(_model?.title ?? ""),
-        subtitle: Text(_model?.body ?? ""),
-      ),
-    );
-  }
-}
